@@ -1,0 +1,351 @@
+@media screen and (min-width: 512px) {
+    .sm {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 786px) {
+    .heading {
+        font-size: 5rem;
+    }
+
+    .heading.font-sm {
+        font-size: 1.5em;
+    }
+
+    .heading.font-md {
+        font-size: 2em;
+    }
+
+    .heading.font-lg {
+        font-size: 3em;
+    }
+
+    .slider-list .slide .slide-box .image-box {
+        width: 40%
+    }
+}
+
+@media screen and (min-width: 896px) {
+    .large {
+        display: none;
+    }
+
+    header .inner-wrapper .header-wrapper .header {
+        padding: 0 5vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .section {
+        padding-left: 7.3%;
+        padding-right: 7.3%;
+    }
+
+    .section-wrapper {
+        padding: 0;
+    }
+
+    .blue-guy img {
+        position: absolute;
+        height: 36vw;
+        max-height: 800px;
+        width: auto;
+    }
+
+    .home-hero {
+        padding: 0 7.3%;
+    }
+
+    .home-hero .home-hero-bg {
+        height: 40vw;
+    }
+
+    .home-hero .section-wrapper {
+        height: 40vw;
+    }
+
+    .heading {
+        font-size: 7rem;
+    }
+
+    .heading.font-sm {
+        font-size: 2em;
+    }
+
+    .heading.font-md {
+        font-size: 3em;
+    }
+
+    .heading.font-lg {
+        font-size: 4em;
+    }
+
+    .section.web-minigame .minigame-box {
+        margin-top: 1em;
+    }
+
+    .section.web-minigame .bunny,
+    .section.web-minigame .bunny-scale {
+        width: 40vw;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .home-hero {
+        padding: 0 5%;
+    }
+
+    .heading {
+        font-size: 10rem;
+    }
+
+    .heading.font-sm {
+        font-size: 2.5em;
+    }
+
+    .heading.font-md {
+        font-size: 3em;
+    }
+
+    .heading.font-lg {
+        font-size: 4.5em;
+    }
+
+    .section.web-minigame .bunny,
+    .section.web-minigame .bunny-scale {
+        width: 43vw;
+    }
+}
+
+/*
+
+MAX WIDTH ZONE
+
+*/
+
+@media screen and (max-width: 1128px) {
+    .home-hero .home-hero-bg .bg .padding-block .logo {
+        width: 200px;
+    }
+
+    .slider-list .slide {
+        padding: 0 5vw;
+    }
+
+    .slider .arrow {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .slider-list .slide .slide-box {
+        max-width: 65rem;
+        height: 40rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .section {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .home-hero .home-hero-bg .bg {
+        margin-top: 50px;
+    }
+
+    .section.web-minigame .bunny,
+    .section.web-minigame .bunny-scale {
+        width: 36vw;
+    }
+
+    .section.web-minigame .minigame-box {
+        margin-top: 30px;
+        height: 140px;
+    }
+
+    .section.web-minigame .minigame-box img {
+        width: 100px;
+    }
+
+    .slider-list .slide .slide-box .content .header {
+        font-size: 8px;
+    }
+
+    /* .home-hero .home-hero-bg .bg .padding-block .home-float-guy-1,
+    .home-hero .home-hero-bg .bg .padding-block .home-float-guy-2 {
+        display: none;
+    } */
+
+    .section.web-minigame .minigame-wrapper .width-max {
+        width: 0;
+    }
+
+    .heading-2 {
+        font-size: 4.5rem;
+    }
+
+    .section.web-minigame .section-wrapper .content {
+        font-size: 16px;
+    }
+
+    .news-grid .news-card .content {
+        font-size: 12px;
+    }
+
+    .section.blockman-editor .section-wrapper{
+        padding-bottom: 50vw;
+    }
+
+    .portal {
+        width: 49rem;
+    }
+
+    #catch-de-lion {
+        width: 100px;
+        margin-top: -50px;
+    }
+
+    .deBattle {
+        height: 50vw;
+    }
+
+    .deBattle.dino {
+        left: -5vw;
+    }
+
+    .deBattle.ball img {
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 896px) {
+    .home-hero .home-hero-bg .bg .padding-block {
+        display: none;
+    }
+
+    .home-hero .home-hero-long-logo {
+        margin-top: 90px;
+    }
+
+    .section.web-minigame .bunny,
+    .section.web-minigame .bunny-scale {
+        display: none;
+    }
+
+    .section.news .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section.blockman-editor .sign {
+        width: 40vw;
+    }
+
+    .slider-list .slide .slide-box {
+        max-width: 50rem;
+        height: 33rem;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .section .wrapper-bg {
+        display: none;
+    }
+
+    .section.blockman-editor .sign {
+        width: 50vw;
+    }
+
+    .slider-list .slide .slide-box {
+        flex-direction: column;
+        max-width: 34rem;
+        height: 100%;
+    }
+
+    .slider-list .slide .wrap-here {
+        height: 100%;
+    }
+
+    .slider-list .slide .slide-box .content .images-container {
+        display: none;
+    }
+
+    .slider-list .slide .slide-box .image-box {
+        margin: 20px;
+    }
+
+    .slider-list .slide .slide-box .image-box-inner {
+        border-radius: 20px;
+    }
+
+    .slider-list .slide .slide-box .image-box .image-box-inner img {
+        width: 100%;
+    }
+
+    .slider-list .slide .slide-box .content {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0px 30px 20px 20px;
+    }
+
+    .slider-list .slide .slide-box .content .images-container {
+        display: none;
+    }
+
+    .heading.font-sm {
+        font-size: 1.5em;
+    }
+
+    .heading.font-md {
+        font-size: 2em;
+    }
+
+    .heading.font-lg {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    header .inner-wrapper .header-wrapper .header .nav-group {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        background-color: #1f1f1f;
+    }
+
+    header .inner-wrapper .header-wrapper .header .nav-group a {
+        height: 4em;
+    }
+
+    .section.web-minigame .minigame-box {
+        margin-top: 30px;
+        height: 120px;
+    }
+
+    .section.web-minigame .minigame-box img {
+        width: 80px;
+    }
+
+    .section.news .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section.hot-game .header .line {
+        display: none;
+    }
+
+    .section.blockman-editor .sign {
+        width: 60vw;
+    }
+
+    .slider .arrow {
+        display: none;
+    }
+
+    #catch-de-lion {
+        width: 80px;
+    }
+}
