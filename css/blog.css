@@ -1,8 +1,8 @@
-body{
+body {
     overflow-x: hidden;
 }
 
-.background{
+.background {
     width: 100%;
     overflow: hidden;
     position: absolute;
@@ -16,7 +16,8 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
-.setflex{
+
+.setflex {
     width: 100%;
     overflow: hidden;
     position: absolute;
@@ -29,14 +30,15 @@ body{
     justify-content: center;
 }
 
-.header-text{
+.header-text {
     text-align: center;
     font-size: 5vh;
     margin-top: 3vh;
     margin-bottom: 4vh;
     color: rgb(26, 24, 24);
 }
-.img-wrap{
+
+.img-wrap {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,51 +47,57 @@ body{
     height: 100%;
 }
 
-.responsive-img{
+.responsive-img {
     width: 100%;
 }
 
-.flexbox{
+.flexbox {
     display: flex;
     justify-content: center;
-    align-items:stretch;
+    align-items: stretch;
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
 }
-.mr{
-    margin-right:8vw ;
+
+.mr {
+    margin-right: 8vw;
 }
-.mc{
+
+.mc {
     margin-right: 2vw;
     margin-left: 2vw;
 }
-.ml{
-    margin-left:8vw ;
+
+.ml {
+    margin-left: 8vw;
 }
 
-.item{
+.top-item {
     padding: 2vw 1.5vw;
-    /* margin: 1vw; */
     height: auto;
     min-height: 27vw;
-    /* width: 26vw; */
     width: 33%;
     color: rgb(44, 44, 44);
     background-color: rgba(240, 211, 106, 1);
     overflow: hidden;
     transition: 150ms;
-    animation-name: show ;
+    animation-name: show;
     animation-duration: 1s;
     position: relative;
 }
 
-.blog-bg{
+.top-date {
+    font-size: 1.5em;
+}
+
+.blog-bg {
     height: 80%;
     position: relative;
     overflow: hidden;
 }
-.event-text{
+
+.event-text {
     color: rgb(0, 80, 0);
     font-weight: 700;
     text-align: end;
@@ -98,43 +106,47 @@ body{
     bottom: 1vh;
 }
 
-.pig{
+.pig {
     position: relative;
     z-index: 10;
-    left:2vw;
+    left: 2vw;
     width: 5vw;
     height: 10vh;
     cursor: pointer;
-    
+
 }
-.skateman{
+
+.skateman {
     z-index: 12;
     width: 20vw;
     height: auto;
     position: absolute;
     bottom: 4vw;
-    animation-name: slide ;
+    animation-name: slide;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     cursor: pointer;
 }
-.m{
-    margin-top:0.5em ;
+
+.m {
+    margin-top: 0.5em;
 }
-.big{
+
+.big {
     font-size: 1.2vw;
 }
-.small{
+
+.small {
     font-size: 1vw;
 }
 
-.recomment-img{
-    object-fit:cover;
+.recomment-img {
+    object-fit: cover;
 }
 
 
-.menu {
-    
+.tab {
+
     max-height: 12vw;
     margin-left: 7vw;
     margin-right: 7vw;
@@ -144,7 +156,8 @@ body{
     align-items: center;
     z-index: 10;
 }
-.line{
+
+.line {
     border-bottom: 0.5vh solid rgb(110, 99, 59);
 }
 
@@ -157,15 +170,20 @@ body{
     border: 0px;
     margin: 50% 1px 50% 20px;
     cursor: pointer;
-    animation-name:show;
+    animation-name: show;
     animation-duration: 2s;
 }
-.background-img{
+
+.menu-button:hover {
+    color: #b49629;
+}
+
+.background-img {
     width: 100%;
 }
 
 
-.content-img{
+.content-img {
     width: 20vw;
     height: 12vw;
 
@@ -173,26 +191,28 @@ body{
 
 
 
-.date{
+.date {
     margin-top: auto;
 }
 
 
 
-a.contents:visited{
-    color:black;
+a.contents:visited {
+    color: black;
 }
-.underline{
+
+.underline {
     text-decoration: underline;
-    text-decoration-color:#ebc84c;
+    text-decoration-color: #ebc84c;
     text-decoration-thickness: 0.15em;
 }
-.btn-text{
+
+.btn-text {
     padding-bottom: 6vh;
 }
 
 
-.content-flex{
+.content-flex {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -200,7 +220,7 @@ a.contents:visited{
     color: black;
 }
 
-.items{
+.items {
     display: flex;
     flex-direction: row;
     padding: 10px 10px;
@@ -210,15 +230,22 @@ a.contents:visited{
     border: 3px solid transparent;
     transition: 300ms;
 }
-.items:hover{
+
+.items:hover {
     border: 3px solid rgb(238, 199, 69);
     color: #5F4F04;
     transition: 300ms;
 }
-.m-1{
+
+.mt-1 {
     margin-top: 4vh;
 }
-.item-3{
+
+.mb-1 {
+    margin-bottom: 4vh;
+}
+
+.item-3 {
     width: auto;
     margin-top: 1vh;
     margin-bottom: 1vh;
@@ -226,7 +253,7 @@ a.contents:visited{
     margin-right: 1vw;
 }
 
-.item-7{
+.item-7 {
     margin-top: 1vh;
     margin-bottom: 1vh;
     margin: 1vh 1vw 1vh 1vw;
@@ -234,91 +261,128 @@ a.contents:visited{
     display: flex;
     flex-direction: column;
 }
-.big-container{
+
+.big-container {
     position: relative;
 }
 
-h2{
+h2 {
     margin-bottom: 1.5vh
 }
 
-.container-event{
-    display:none;
+.container-event {
+    display: none;
     position: absolute;
-    top:0;
-    
-    
+    top: 0;
 }
 
-@media only screen and (max-width: 992px) {
-    .items{
+@media only screen and (max-height: 600px) {
+    .hidden-on-rotate {
+        display: none;
+    }
+
+}
+/* @media only screen and (max-width: 600px) {
+    .hidden {
+        display: none;
+    }
+
+    .item-7 {
+        font-size: 2em;
+    }
+} */
+
+@media only screen and (max-width: 615px) {
+    .hidden {
+        display: none;
+    }
+    .item-7 {
+        font-size: 2em;
+    }
+    .items {
         flex-direction: column;
         align-items: center;
+        margin: 2vh auto 2vh 5vw;
+        margin-left: max(5vw);
+        width: 40%
     }
-    .menu{
+
+    .item-7 {
+        font-size: 1.5em;
+    }
+
+    .menu {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .menu-button{
-        font-size:1.5vw;
+
+    .menu-button {
+        font-size: 1.5vw;
     }
-    .date{
-        display:none
+
+    .date {
+        display: none
     }
-    .pig , .skateman{
-        display:none
+
+    .pig,
+    .skateman {
+        display: none
     }
-    .background{
+
+    .background {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .flexbox{
+
+    .flexbox {
         flex-direction: column;
         position: absolute;
         flex-wrap: nowrap;
         justify-content: center;
     }
-    .item{
-        /* min-height: 20vh;
-        max-height: 22vh; */
+
+    .top-item {
         width: 26vw;
         margin: 1vh auto;
         height: auto;
-        min-width: 45vw;
+        min-width: 50vw;
         text-align: center;
     }
-    .blog-bg{
+
+    .blog-bg {
         height: 90vh;
     }
-    .rectext{
-        display:none
+
+
+    .rectext {
+        display: none
     }
-    
+
 }
 
 
-@keyframes show{
-    0%{
+@keyframes show {
+    0% {
         transform: translateY(50%);
         opacity: 0.2;
     }
-    100%{
+
+    100% {
         transform: translateY(0%);
         opacity: 1;
     }
 }
 
-@keyframes slide{
-    0%{
+@keyframes slide {
+    0% {
         transform: translateX(-80vw);
         animation-timing-function: ease-out;
 
     }
 
-    100%{
+    100% {
         transform: translateX(100vw);
     }
 

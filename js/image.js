@@ -1,14 +1,14 @@
 const get_image = (url) => new Promise(resolve => {
     const image = new Image()
     image.onload = () => {
-        let { width, height } = image
-        const a = 200 / width
-        const b = 200 / height
-        let scale = a > b ? a : b
-        width = Math.floor(width * scale)
-        height = Math.floor(height * scale)
-        image.width = width
-        image.height = height
+        // let { width, height } = image
+        // const a = 200 / width
+        // const b = 200 / height
+        // let scale = a > b ? a : b
+        // width = Math.floor(width * scale)
+        // height = Math.floor(height * scale)
+        // image.width = width
+        // image.height = height
         resolve(image)
     }
     image.crossOrigin = 'Anonymous'
@@ -24,8 +24,7 @@ const dim = async (img) => {
     const ctx = canvas.getContext('2d', {
         willReadFrequently: true,
         antialias: false,
-        preserveDrawingBuffer:true,
-        desynchronized:true,
+        desynchronized: true,
     })
     let { width, height } = img
     canvas.width = width
@@ -41,6 +40,7 @@ const dim = async (img) => {
     let bottom = -1
     let left = -1
     let right = -1
+    console.time('hell')
     for (let y = 0; y < height; y++) {
         let k = false
         let lastX = 0
@@ -75,6 +75,7 @@ const dim = async (img) => {
             }
         }
     }
+    console.timeEnd('hell')
     const w = right - left
     const h = bottom - top
     const clone = document.createElement('canvas')
@@ -89,11 +90,10 @@ const dim = async (img) => {
         const data = await fetch("https://gamertocoder.garena.co.th/api/assets").then(res => res.json())
             .then(data => data['characters'])
         const images = await Promise.all(data.map(url => get_image(url)))
-        console.time('hell')
+        // console.time('hell')
         for (let i = 0; i < images.length; i++) {
             const img = images[i]
             // dim(img)
             document.body.insertAdjacentHTML('beforeend', `<img src="${await dim(img)}" />`)
         }
-        console.timeEnd('hell')
     })();

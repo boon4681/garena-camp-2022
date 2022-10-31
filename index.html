@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./images/blockman-go-logo-1x1.png" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Blockman Go</title>
@@ -26,9 +26,14 @@
                             <img class="home-logo" src="./images/blockman-go-logo-long.png" alt="home-logo">
                         </a>
                         <div class="space-x"></div>
-                        <div class="nav-group">
-                            <div class="sm">
-
+                        <div id="nav" class="nav-group">
+                            <div id="close" class="menu close sm">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z">
+                                    </path>
+                                </svg>
                             </div>
                             <a class="link-active hover" href="./index.html">
                                 <p>หน้าหลัก</p>
@@ -39,6 +44,13 @@
                             <a class="link-active hover" href="./blogs.html">
                                 <p>ข่าวสาร</p>
                             </a>
+                        </div>
+                        <div id="menu" class="menu">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"
+                                    d="M80 160h352M80 256h352M80 352h352"></path>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -73,6 +85,11 @@
                     <h2 class="heading wow header-news">
                         <span class="black-gold">ข่าวสารล่าสุด</span>
                     </h2>
+                    <div class="button left nomargin">
+                        <a href="./blogs.html" target="_blank" rel="noopener noreferrer">
+                            <span>ไปที่หน้าข่าวสาร</span>
+                        </a>
+                    </div>
                 </div>
                 <div class="news-grid">
                     <a href="https://blockmango.garena.com/social_system/article/en/40/" target="_blank"
@@ -196,14 +213,15 @@
                     </div>
                 </div>
                 <div class="relative" style="padding-top: 10rem;">
-                    <img id="catch-de-lion" style="transition: 0.25s;" class="catchDeAnimal absolute right bottom"
+                    <img id="catch-de-lion" style="transition: 0.25s;" class="catchDeAnimal absolute left bottom"
                         src="./images/minigame-lion.png" alt="mini_games-1">
                 </div>
             </div>
         </section>
         <section class="section blockman-editor">
             <div class="bg">
-                <img id="dino-goku-target" class="deBattle dino absolute left bottom" src="./images/home-editor-dino.png" alt="dino">
+                <img id="dino-goku-target" class="deBattle dino absolute left bottom"
+                    src="./images/home-editor-dino.png" alt="dino">
                 <img id="goku" class="deBattle absolute right bottom" src="./images/home-editor-goku.png" alt="goku">
                 <div id="goku-ball" class="deBattle ball absolute right bottom">
                     <div class="rotate">
@@ -212,6 +230,7 @@
                 </div>
             </div>
             <div class="section-wrapper">
+                <img id="puffle" class="catchDeAnimal absolute" src="./images/minigame-fish.png" alt="fish">
                 <div class="sign">
                     <img src="./images/editor.png" alt="banner-editor">
                 </div>
@@ -223,17 +242,57 @@
                         <span>ในแบบของคุณ</span>
                     </h2>
                 </div>
+                <img src="./images/minigame-pig.png" class="catchDeAnimal absolute" id="piggy" alt="piggy">
                 <div class="flex flex-row center-x center-y">
-                    <div class="button big">
-                        <span>เริ่มต้นใช้งาน</span>
+                    <a href="https://blockmaneditor.garena.com/th/" target="_blank" rel="noopener noreferrer">
+                        <div class="button big">
+                            <span>เข้าหน้าเว็บหลัก</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="section playnow">
+            <div class="bg absolute right top">
+                <img src="./images/playnow-bg.png" alt="playnow-bg">
+            </div>
+            <div class="section-wrapper">
+
+                <div class="absolute left">
+                    <div class="header">
+                        <h2 class="heading font-lg">
+                            <span>
+                                เริ่มต้นการผจญภัย
+                            </span>
+                        </h2>
+                        <h2 class="heading font-sm">
+                            <span>ระบบที่เกมหลากหลาย มินิเกมมากมายกำลังรอคุณอยู่ เปิดให้บริการแล้ววันนี้ </span>
+                        </h2>
+                    </div>
+                    <div class="flex">
+                        <a href="https://blockmaneditor.garena.com/th/" target="_blank" rel="noopener noreferrer">
+                            <div class="button big">
+                                <span>เข้าหน้าเว็บหลัก</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-        <section style="height: 100vh;"></section>
+        <div class="footer">
+            <div class="flex">
+                <div class="text">made with ❤️ by</div>
+                <div class="made">
+                    <div class="text">Passwich Thongruang,</div>
+                    <div class="text">Tee anusonsart,</div>
+                    <div class="text">Chayanon Kummaraka</div>
+                </div>
+            </div>
+        </div>
     </main>
-    <script src="./main.js"></script>
-    <script src="./effect.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/effect.js"></script>
 </body>
 
 </html>

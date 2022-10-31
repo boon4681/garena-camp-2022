@@ -2,6 +2,10 @@
     .sm {
         display: none;
     }
+
+    .menu {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 786px) {
@@ -142,6 +146,14 @@ MAX WIDTH ZONE
         max-width: 65rem;
         height: 40rem;
     }
+
+    .section.playnow .bg {
+        width: 60vw;
+    }
+
+    .section.playnow .section-wrapper .header {
+        width: 60vw;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -193,7 +205,7 @@ MAX WIDTH ZONE
         font-size: 12px;
     }
 
-    .section.blockman-editor .section-wrapper{
+    .section.blockman-editor .section-wrapper {
         padding-bottom: 50vw;
     }
 
@@ -201,7 +213,7 @@ MAX WIDTH ZONE
         width: 49rem;
     }
 
-    #catch-de-lion {
+    .catchDeAnimal {
         width: 100px;
         margin-top: -50px;
     }
@@ -216,6 +228,11 @@ MAX WIDTH ZONE
 
     .deBattle.ball img {
         width: 30vw;
+    }
+
+    .section.playnow .section-wrapper .header {
+        width: 100%;
+        max-width: 60vw;
     }
 }
 
@@ -345,7 +362,13 @@ MAX WIDTH ZONE
         display: none;
     }
 
-    #catch-de-lion {
-        width: 80px;
+    .section.blockman-editor .section-wrapper>.header {
+        font-size: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .catchDeAnimal {
+        width: 100px;
     }
 }

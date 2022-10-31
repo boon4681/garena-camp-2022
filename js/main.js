@@ -37,23 +37,6 @@ const linkActive = (ele, classList) => {
     linkActive(a, 'focus')
 })
 
-onVisible(
-    document.querySelector('.header-news'),
-    ([entry]) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('make-wow')
-        }
-    }
-)
-onVisible(
-    document.querySelector('.header-hot-game'),
-    ([entry]) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('make-wow')
-        }
-    }
-)
-
 const a = [...document.querySelectorAll("div[id*=minigame-animal-]")];
 a.forEach(a => {
     a.onclick = (e) => {
@@ -273,120 +256,9 @@ const modal = (inner, time = 5, options) => {
     }, time * 1000)
 }
 
-const catchDeLion = () => {
-    const lion = document.querySelector('img#catch-de-lion')
-    let isVisible = false
-    onVisible(
-        lion,
-        ([entry]) => {
-            isVisible = entry.intersectionRect
-        }
-    )
-    const update = () => {
-        const windowRect = document.body.getBoundingClientRect()
-        const w = windowRect.width
-        const h = windowRect.height
-        const eleRect = lion.getBoundingClientRect()
-        const left = (((h - eleRect.y) / h) * w)
-        if (left > 0 && left < w - eleRect.width) {
-            lion.style.transform = `translateX(-${left}px)`
-        }
-    }
-    window.addEventListener('scroll', (e) => {
-        if (isVisible) {
-            update()
-        }
-    })
-    update()
-    lion.onclick = () => {
-        const card = `
-        <div class="card card-found-you flex flex-row">
-            <div class="animal">
-                <img src="./images/minigame-lion.png" alt="mini_games-1">
-            </div>
-            <h2 class="heading font-md">
-                <span>ยินดีด้วยคุณได้รับ</span>
-            </h2>
-            <div class="header">
-                <h2 class="heading font-lg">
-                    <span>ไลเก้อ</span>
-                </h2>
-            </div>
-            <h2 class="heading font-sm">
-                <span>ราชสีห์ป่าช้า</span>
-            </h2>
-        </div>
-        `
-        modal(card, 3.5, {
-            fn: (e, time) => {
-                const animal = e.querySelector('div.animal')
-                effectDoodle(animal, time * 0.4, 8, 0.05, 0.2)
-            },
-            effect: true
-        })
-        effectFadeOutRemove(lion, 0.2)
-    }
-}
-
-const gokuBall = () => {
-    const goku = document.getElementById('goku')
-    const ball = document.getElementById('goku-ball')
-    const dino = document.getElementById('dino-goku-target')
-    const gokuRealBall = document.getElementById('goku-real-ball')
-    let isVisible = false
-    let needReset = false
-    onVisible(
-        ball,
-        ([entry]) => {
-            isVisible = entry.intersectionRect
-            if (needReset && entry.intersectionRatio == 0) {
-                needReset = false
-                ball.style.opacity = 1
-                dino.style.opacity = 1
-                ball.style.transform = `translateX(0px)`
-            }
-        }, {
-        threshold: [0.01, 1]
-    }
-    )
-    const update = () => {
-        if (needReset) return;
-        const windowRect = document.body.getBoundingClientRect()
-        const w = windowRect.width
-        const h = windowRect.height / 1.5
-        const eleRect = ball.getBoundingClientRect()
-        const dinoRect = dino.getBoundingClientRect()
-        let left = (((h - eleRect.y) / (h - 100)) * w)
-        left = Math.min(Math.max(0, left), w - eleRect.width) - 100
-        if (left > 50) {
-            shake(goku, 2, 2, 2, 1, 50)
-        }
-        ball.style.transform = `translateX(-${left}px)`
-        shake(gokuRealBall, 5, 5, 5, false, 100)
-        if (left > w - eleRect.width - dinoRect.width / 2 - 50) {
-            needReset = true
-            ball.style.opacity = 0
-            shake(dino, 5, 5, 5, 10, 50, () => {
-                effectFadeOut(dino, 0.5)
-            })
-        }
-    }
-    window.addEventListener('scroll', (e) => {
-        if (isVisible) {
-            update()
-        }
-    })
-    update()
-}
-
-
-    ; (async () => {
-        const raw = await fetch('https://gamertocoder.garena.co.th/api/minigames').then(res => res.json())
-        const data = raw
-        carousel(document.querySelector('div#hot-game-slider'), data.filter(a => a.images != undefined).splice(0, 3))
-    })();
-
-
+// review(document.querySelector("div#minigame-animal-1"))
+// review(document.querySelector("div#minigame-animal-2"))
+// review(document.querySelector("div#minigame-animal-3"))
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.noDragIMG').forEach(a => {
         a.querySelectorAll('img').forEach(a => {
@@ -395,10 +267,31 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         })
     })
-    gokuBall()
-    catchDeLion()
 })
 
-// review(document.querySelector("div#minigame-animal-1"))
-// review(document.querySelector("div#minigame-animal-2"))
-// review(document.querySelector("div#minigame-animal-3"))
+
+const menu = () => {
+    const openBtn = document.getElementById('menu')
+    const nav = document.getElementById('nav')
+    const closeBtn = document.getElementById('close')
+    const show = (state) => {
+        if (state) {
+            nav.style.left = '0px'
+        } else {
+            nav.style.left = ''
+        }
+    }
+    openBtn.onclick = () => {
+        show(true)
+    }
+    openBtn.ontouchend = () => {
+        show(true)
+    }
+    closeBtn.onclick = () => {
+        show(false)
+    }
+    closeBtn.ontouchend = () => {
+        show(false)
+    }
+}
+menu()

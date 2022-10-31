@@ -142,10 +142,13 @@ const effectDoodle = (root, time, speed = 2, amplitudeX = 1, amplitudeY = 1) => 
  * @param {HTMLDivElement} root
  * @param {number} time
  */
-const effectFadeOutRemove = (root, time) => {
+const effectFadeOutRemove = (root, time,callback) => {
     root.style.transition = `${time}s`
     root.style.opacity = '0'
     setTimeout(() => {
+        if(callback){
+            callback()
+        }
         root.remove()
     }, time * 1000)
 }

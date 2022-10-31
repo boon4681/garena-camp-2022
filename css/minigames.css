@@ -1,51 +1,3 @@
-:root {
-    font-family: 'Nunito Sans', 'Prompt', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #ECE8E1;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-}
-
-*,
-:after,
-:before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-body,
-html {
-    margin: 0px;
-    font-size: 10px;
-    height: 100%;
-    width: 100%;
-    font-size: 15px;
-
-}
-
-div::-webkit-scrollbar {
-    width: .8rem;
-}
-
-div::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-div::-webkit-scrollbar-thumb {
-    background: rgb(255, 255, 255);
-    border-radius: 2rem;
-}
-
-
 .home-logo {
     height: 48px;
 }
@@ -60,25 +12,28 @@ div::-webkit-scrollbar-thumb {
     margin-top: 0;
     margin-bottom: 0;
 }
-li{
+
+li {
     cursor: pointer;
 }
-.resize{
+
+.resize {
     position: absolute;
     z-index: 20;
     width: 10vw;
     height: auto;
 }
-.responsive-img{
+
+.responsive-img {
     max-width: 100%;
     height: auto;
     border-radius: 20px;
 }
-.minigame-card {
 
+.minigame-card {
     width: 420px;
     height: 600px;
-    background-color: rgba(240, 211, 106, 1);
+    background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     padding: 30px;
     margin: 30px;
@@ -86,14 +41,15 @@ li{
     display: flex;
     flex-direction: column;
     vertical-align: middle;
-    border-width: 3px ;
+    border-width: 3px;
     border-color: transparent;
     border-style: solid;
     box-shadow: #000;
     font-weight: bold;
     transition: 150ms;
 }
-.minigame-img{
+
+.minigame-img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,7 +73,7 @@ ul {
 }
 
 .minigame-card:hover {
-    
+
     border-width: 3px;
     border-style: solid;
     word-wrap: break-word;
@@ -195,17 +151,18 @@ a {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background-size: cover;
-    background-image: url("https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/bmg-banner/02.png");
-    filter: blur(3px);
+    background-image: url("https://resource.blockmanmobile.com/web/BMGOfficialWebsite/News/BMG-social-mmoKV.jpg");
+    filter: blur(2px);
     background-position: center;
     background-repeat: no-repeat;
 }
-.setflex{
+
+.setflex {
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -257,6 +214,8 @@ a {
     margin: auto;
     height: auto;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .minigame-content h2 {
@@ -269,11 +228,13 @@ a {
 .minigame-txt {
     margin: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 20px;
     width: 400px;
     border-radius: 20px;
+    
 }
 
 /*.minigame-txt::after{
@@ -321,7 +282,7 @@ h1 {
     position: relative;
     display: flex;
     justify-content: center;
-    background: url(../images/sign.png);
+    background: url(https://media.discordapp.net/attachments/576723256757977100/1036671431968297040/4ff623e558abf4ea.png);
     background-position: center;
     background-repeat: no-repeat;
     height: 300px;
@@ -362,13 +323,147 @@ h1 {
         transform: translateY(0px);
     }
 }
+
 @media only screen and (max-width: 1500px) {
-    .minigame-head img{
+    .minigame-head img {
         transform: translateX(300px);
     }
 }
-@media only screen and (max-width: 1200px) {
-    .minigame-head img{
-        display:none
+
+@media only screen and (max-width: 1300px) {
+    .minigame-head img {
+        display: none;
+    }
+}
+
+
+
+
+.card-container {
+    margin: 50px auto;
+    max-width: 1280px;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(var(--cols), 1fr);
+}
+
+.card-container .mn-card {
+    user-select: none;
+    list-style-type: none;
+    padding: 2.5em 3em 2em;
+    width: 420px;
+    border-radius: 8px;
+    border: 2px solid #32303c;
+    color: #323029;
+    cursor: pointer;
+    overflow: hidden;
+    transform: translate(5px, 5px);
+    transition: 0.25s;
+    background: #fff1d9;
+}
+
+.card-container .mn-card:hover {
+    transform: translate(0px, 0px);
+    border: 2px solid black;
+    box-shadow: 5px 5px black;
+}
+
+.card-container .mn-card>.header {
+    display: block;
+    font-size: 10px;
+}
+
+.card-container .mn-card>.header>.heading {
+    font-size: 35px !important;
+}
+
+.card-container .mn-card>.header {
+    overflow: hidden;
+    transition: 0.25s;
+    position: relative;
+    top: 0;
+}
+
+.card-container .mn-card>.header.hide {
+    opacity: 0;
+    top: -100%;
+}
+
+.card-container .mn-card>.header>.image {
+    overflow: hidden;
+}
+
+.card-container .mn-card>.header>.image>img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.card-container .mn-card>.header>.genres {
+    margin: 15px 0;
+}
+
+.card-container .mn-card>.description>h3 {
+    font-size: 1.5em;
+}
+
+.card-container .mn-card>.description {
+    font-size: 16px;
+    transition: 0.25s;
+    position: relative;
+    top: 0;
+}
+
+.card-container .mn-card>.description.full>.inner {
+    -webkit-line-clamp: unset;
+}
+
+.card-container .mn-card>.description>.inner {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.genres {
+    margin-bottom: auto;
+}
+
+.genres .tag {
+    font-size: 14px;
+    display: inline-block;
+    color: #FAF2E5;
+    background-color: #615B4B;
+    border-radius: 4px;
+    padding: 2px 12px;
+    margin: 4px;
+    margin-left: 0;
+}
+
+@media screen and (min-width: 460px) {
+    .card-container {
+        --cols: 1
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .card-container {
+        --cols: 2
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .card-container {
+        --cols: 3
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .card-container {
+        padding: 5vw 12px;
+    }
+
+    .card-container>.mn-card {
+        width: 100%;
+        transform: translate(0px, 0px);
     }
 }

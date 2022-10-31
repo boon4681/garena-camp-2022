@@ -83,6 +83,7 @@ header .inner-wrapper .header-wrapper .header {
 header .inner-wrapper .header-wrapper .header .nav-group {
     display: flex;
     align-items: center;
+    transition: 1s;
 }
 
 header .inner-wrapper .header-wrapper .header a {
@@ -189,9 +190,10 @@ header .inner-wrapper .header-wrapper .header a.hover:hover p::after {
     width: auto;
 }
 
-.button{
-    border-radius: 10px;
-    padding: 10px 20px;
+.button {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 3px 10px;
     background-color: #F0D36A;
     color: #323029;
     display: flex;
@@ -200,11 +202,25 @@ header .inner-wrapper .header-wrapper .header a.hover:hover p::after {
     margin: 0 5px;
 }
 
-.button.big{
+.button.big {
+    border-radius: 10px;
+    padding: 10px 20px;
     width: 20rem;
     height: 6rem;
     font-size: 2.5rem;
     margin: 20px auto;
+}
+
+.button.nomargin {
+    margin: 0;
+}
+
+.button.left {
+    margin-left: auto;
+}
+
+.button.right {
+    margin-right: auto;
 }
 
 .section {
@@ -245,7 +261,8 @@ header .inner-wrapper .header-wrapper .header a.hover:hover p::after {
     padding: 4rem 0;
 }
 
-.card {
+.card,
+.mn-card {
     background-color: #F0D36A;
     border-radius: 10px;
     padding: 20px;
@@ -253,7 +270,8 @@ header .inner-wrapper .header-wrapper .header a.hover:hover p::after {
     min-height: 200px;
 }
 
-.card .heading {
+.card .heading,
+.mn-card .heading {
     font-weight: 600;
 }
 
@@ -441,6 +459,11 @@ header .inner-wrapper .header-wrapper .header a.hover:hover p::after {
     position: relative;
     overflow: visible;
     padding-bottom: 5vw;
+}
+
+.section.news .header {
+    align-items: center;
+    width: 100%;
 }
 
 .section.news::before {
@@ -701,18 +724,67 @@ header .inner-wrapper .header-wrapper .header a.hover:hover p::after {
     max-width: 45rem;
 }
 
-.section.blockman-editor .section-wrapper>.header{
+.section.blockman-editor .section-wrapper>.header {
+    font-size: 16px;
     flex-direction: column;
     align-items: center;
 }
 
-.section.blockman-editor .section-wrapper>.header h2{
+.section.blockman-editor .section-wrapper>.header h2 {
     font-weight: 500;
     text-shadow: 0px 4px 4px #000000;
 }
 
 .section.blockman-editor .sign img {
     width: 100%;
+}
+
+.section.blockman-editor .button.big {
+    box-shadow: 1px 2px 20px 0px #25252356;
+    margin-top: 3em;
+    width: 30rem;
+    height: 10rem;
+    font-size: 3.25em;
+}
+
+.section.playnow {
+    color: #323029;
+    position: relative;
+    overflow: visible;
+    height: 70rem;
+}
+
+.section.playnow .section-wrapper {
+    padding-top: 10rem;
+}
+
+.section.playnow .section-wrapper .header {
+    font-size: 16px;
+    flex-direction: column;
+    max-width: 40vw;
+}
+
+.section.playnow .section-wrapper .header h2 {
+    font-weight: 500;
+}
+
+.section.playnow .button.big {
+    box-shadow: 1px 2px 20px 0px #25252356;
+    margin-top: 3em;
+    width: 30rem;
+    height: 10rem;
+    font-size: 3.25em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.section.playnow .bg {
+    width: 40vw;
+    overflow: hidden;
+}
+
+.section.playnow .bg img {
+    height: 100%;
 }
 
 .slider {
@@ -759,10 +831,11 @@ header .inner-wrapper .header-wrapper .header a.hover:hover p::after {
     width: 100%;
     border-radius: 10px;
     max-width: 90rem;
-    height: 47rem;
+    height: 48rem;
     margin: 0 auto;
     overflow: hidden;
     background-color: #F0D36A;
+    box-shadow: 1px 2px 20px 0px #c3bda9;
 }
 
 .slider-list .slide .slide-box .image-box {
@@ -986,6 +1059,52 @@ header .inner-wrapper .header-wrapper .header a.hover:hover p::after {
     animation-name: Roll;
     animation-timing-function: linear;
     animation-duration: 2s;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0;
+    color: #bebebe;
+    background-color: black;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 32px;
+}
+
+.footer a:hover {
+    color: #e2e2e2;
+}
+
+.footer .made {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    justify-content: center;
+}
+
+.footer .text {
+    font-size: 12px;
+    margin-left: 7px;
+}
+
+.menu {
+    margin: auto 0;
+    margin-top: 15px;
+    margin-left: auto;
+}
+
+.menu.close {
+    margin: 15px 5vw;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+
+.menu svg {
+    width: 50px;
+    height: 50px;
 }
 
 @keyframes confetti {
