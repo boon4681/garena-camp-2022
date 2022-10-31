@@ -16,7 +16,7 @@ onVisible(
 )
 let catched = 0
 
-const catchDeAnimalAnimate = (ele, image, name, label) => {
+const catchDeAnimalAnimate = (ele, image, name, label, callback) => {
     const card = `
     <div class="card card-found-you flex flex-row">
         <div class="animal">
@@ -40,11 +40,12 @@ const catchDeAnimalAnimate = (ele, image, name, label) => {
             const animal = e.querySelector('div.animal')
             effectDoodle(animal, time * 0.4, 8, 0.05, 0.2)
         },
-        effect: true
+        effect: true,
+        callback: () => {
+            catched++
+        }
     })
-    effectFadeOutRemove(ele, 0.2,()=>{
-        catched++
-    })
+    effectFadeOutRemove(ele, 0.2)
 }
 
 const catchDeLion = () => {
@@ -173,6 +174,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const c = setInterval(() => {
         if (catched == 3) {
             clearInterval(c)
+            catchDeAnimalAnimate(document.createElement('div'), 'dino', 'เควสสำเร็จ', 'ปลดล็อคห้องแห่งความลับ')
+        }
+    }, 50)
+    const d = setInterval(() => {
+        if (catched == 4) {
+            clearInterval(d)
             window.location.href = './secretpage.html'
         }
     }, 50)

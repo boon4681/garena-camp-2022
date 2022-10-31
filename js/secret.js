@@ -12,19 +12,19 @@ let scale=1
 let mascos=document.getElementById("mascos")
 
 bunny.addEventListener("click",()=>{
-    alert("น้องบันนี่ : หนูหลงทาง")
+    alert("น้องบันนี่ : ห้องแห่งความลับสนุกสนุดๆเลย")
 })
 mascos.addEventListener("click",()=>{
     alert("ไดโนซอร์แมน : (ฟิ้ววววว.....)")
 })
 superstar.addEventListener("click",()=>{
-    alert("ซุปเปอร์สตาร์ : ")
+    alert("ซุปเปอร์สตาร์ : ยินดีต้อนรับสู่ห้องแห่งความลับ หวังว่าคุณจะสนุกกับเว็บไซต์นะ")
 })
 skateman.addEventListener("click",()=>{
-    alert("วินัย : ขอทางหน่อยครับสุดหล่อ บรื๊นๆๆๆๆ")
+    alert("สเกตบอย : ขอทางหน่อยครับสุดหล่อ บรื๊นๆๆๆๆ")
 })
 piggy.addEventListener("click",()=>{
-    alert("เบค่อนคุง : อู๊ดๆ")
+    alert("พิกกี้ : อู๊ดๆ")
 })
 
 setInterval(function () {

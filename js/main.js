@@ -223,7 +223,7 @@ const carousel = (slider, data) => {
  * 
  * @param {HTMLDivElement|string} inner 
  * @param {number} time 
- * @param {{fn:(root:HTMLDivElement,time:number)=>void,effect:boolean}} options 
+ * @param {{fn:(root:HTMLDivElement,time:number)=>void,effect:boolean,callback}} options 
  */
 const modal = (inner, time = 5, options) => {
     const root = document.body
@@ -253,6 +253,9 @@ const modal = (inner, time = 5, options) => {
     }, time * 0.9 * 1000)
     setTimeout(() => {
         overlay.remove()
+        if(options.callback){
+            options.callback()
+        }
     }, time * 1000)
 }
 
