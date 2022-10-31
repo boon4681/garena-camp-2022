@@ -1,5 +1,4 @@
 /**
- * Created by boon4681
  * @param {Element} ele 
  * @param {IntersectionObserverCallback} func
  * @param {IntersectionObserverInit} options
@@ -10,7 +9,6 @@ const onVisible = (ele, func, options) => {
 }
 
 /**
- * Created by boon4681
  * @param {Element} root 
  */
 const review = (root) => {
@@ -21,7 +19,6 @@ const review = (root) => {
 
 
 /**
- * Created by boon4681
  * @param {HTMLAnchorElement} ele,
  * @param {string[]} classList
  */

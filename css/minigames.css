@@ -72,12 +72,13 @@ li{
 .responsive-img{
     max-width: 100%;
     height: auto;
+    border-radius: 20px;
 }
 .minigame-card {
 
-    width: 400px;
+    width: 420px;
     height: 600px;
-    background-color: rgba(240, 211, 106, 0.9);
+    background-color: rgba(240, 211, 106, 1);
     color: rgb(0, 0, 0);
     padding: 30px;
     margin: 30px;
@@ -92,13 +93,21 @@ li{
     font-weight: bold;
     transition: 150ms;
 }
-
+.minigame-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
 
 
 .minigame-card .detail {
-    margin-top: 2px;
     height: 150px;
     overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 16px;
 }
 
 ul {
@@ -117,18 +126,18 @@ ul {
     /*box-shadow: rgba(0, 0, 0, 0.2) 5px 5px,rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;*/
 }
 
-.minigame-card:hover img {
+/*.minigame-card:hover img {
     box-shadow: rgb(255, 255, 255)5px 25px 20px -20px;
     transition: 150ms;
-}
+}*/
 
 
 .name {
     display: flex;
     justify-content: center;
-    margin: 5px;
     font-size: 30px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 #list {
@@ -145,9 +154,10 @@ ul {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 20px;
+
 }
 
-.type:after {
+/*.type:after {
     content: "";
     position: absolute;
     background-color: #ffae00;
@@ -157,11 +167,11 @@ ul {
     bottom: -10px;
     transition: 0.5s;
     transform: scale(0, 1);
-}
+}*/
 
-.type:after:hover {
+/*.type:after:hover {
     width: 100%;
-}
+}*/
 
 .link-button {
     background: #000;

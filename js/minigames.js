@@ -27,7 +27,7 @@ fetch("https://gamertocoder.garena.co.th/api/minigames")
                     '<div class="name " onclick="changeName(' + currentData.name + ')">' +
                     currentData.name +
                     '</div>' +
-                    '<div>'+
+                    '<div class="minigame-img">'+
                     '<img class="responsive-img" src="' + currentData.icon + '" alt="minigame-icon"/>' +
                     '</div>'+
                     '<div class="type">ประเภท: ' + genre_string + '</div>' +
